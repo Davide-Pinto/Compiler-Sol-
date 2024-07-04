@@ -1,0 +1,72 @@
+L0: galloc 1
+L1: iconst 5
+L2: gstore 0
+L3: galloc 1
+L4: iconst 10
+L5: gstore 1
+L6: galloc 1
+L7: iconst 50
+L8: gstore 2
+L9: galloc 1
+L10: iconst 25
+L11: gstore 3
+L12: galloc 1
+L13: iconst 100
+L14: gstore 4
+L15: galloc 1
+L16: iconst 75
+L17: gstore 5
+L18: call L52
+L19: halt
+L20: lload -1
+L21: lload -2
+L22: ileq
+L23: jumpf L27
+L24: lload -2
+L25: retval 2
+L26: jump L29
+L27: lload -1
+L28: retval 2
+L29: lload -2
+L30: lload -1
+L31: ileq
+L32: jumpf L36
+L33: lload -2
+L34: retval 2
+L35: jump L38
+L36: lload -1
+L37: retval 2
+L38: lalloc 1
+L39: lload -2
+L40: lload -1
+L41: iadd
+L42: lstore 2
+L43: lload 2
+L44: retval 2
+L45: lalloc 1
+L46: lload -2
+L47: lload -1
+L48: isub
+L49: lstore 2
+L50: lload 2
+L51: retval 2
+L52: lalloc 1
+L53: gload 1
+L54: gload 2
+L55: call L20
+L56: gload 2
+L57: call L38
+L58: gload 5
+L59: gload 0
+L60: call L20
+L61: gload 3
+L62: gload 2
+L63: gload 2
+L64: call L38
+L65: call L29
+L66: call L45
+L67: iadd
+L68: lstore 2
+L69: lload 2
+L70: iprint
+L71: ret 0
